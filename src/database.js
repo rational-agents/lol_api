@@ -1,20 +1,26 @@
 const Sequelize = require('sequelize');
 
+const { DB } = process.env;
+const { DB_USER } = process.env;
+const { DB_PASSWORD } = process.env;
+const { DB_HOST } = process.env;
+const { DB_DIALECT } = process.env;
+
+/*
 const database = new Sequelize({
+	host: 'localhost',
     database: 'lol',
-    dialect: 'postgres',
+	dialect: 'postgres',
+    operatorsAliases: Sequelize.Op
+  });
+*/
+
+const database = new Sequelize( DB,DB_USER,DB_PASSWORD,{
+	host: DB_HOST,
+	dialect: DB_DIALECT,
     operatorsAliases: Sequelize.Op
   });
 
-  /*
-const Clubs = database.define([
-  'require',
-  'dependency'
-], function(require, factory) {
-  'use strict';
-  
-});
-*/
 const Clubs = database.define('clubs',{
 	id:{type: Sequelize.INTEGER,primaryKey: true,autoIncrement: true}, //serial PRIMARY KEY,
 	venue:{type:Sequelize.STRING, allowNull:false}, //varchar NOT NULL,

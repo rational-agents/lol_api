@@ -4,6 +4,12 @@
  * Module dependencies.
  */
 
+ /* 
+ Start with loading module for 
+ reading config from .env file 
+ */
+require('dotenv').config();
+
 var app = require('../app');
 var debug = require('debug')('api-exp:server');
 var http = require('http');
@@ -14,7 +20,7 @@ const { database } = require('../src/database');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '8081');
+var port = normalizePort(process.env.APP_PORT || '8081');
 app.set('port', port);
 
 /**
