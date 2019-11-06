@@ -34,6 +34,7 @@ Gets details about a comedian.
 
 Comedians
 ---
+Gets a list of comedians based on location i.e. city. 
 
 * URL
 
@@ -51,6 +52,7 @@ Comedians
 
 Club
 ---
+Gets details about a specific club.
 
 * URL
 
@@ -68,6 +70,7 @@ Club
 
 Clubs
 ---
+Gets a list of clubs based on their location i.e. city.
 
 * URL
 
@@ -85,6 +88,7 @@ Clubs
 
 Show
 ---
+Gets the details about a show by it's headline.
 
 * URL
 
@@ -102,6 +106,7 @@ Show
 
 Shows
 ---
+Gets a list of shows based on venue i.e. club.
 
 * URL
 
