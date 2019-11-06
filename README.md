@@ -11,26 +11,50 @@ The following documentation describes how to navigate the following routes:
 * host/**Show**/..
 * host/**Shows**/..
 
-Note: at this time, all api calls are case sensitive given that postgres is the backend database engine.  And postgres is case-sensitive by nature. 
+Note: at this time, all api query parameters are case sensitive given that postgres is the backend database engine.  And postgres is case-sensitive by nature. 
 
 Comedian
 ---
 Gets details about a comedian.
 
-* URL
+* **URL**
 
-* Method
+    /comedian/:name
+* **Method**
 
     `GET`
+    
+*  **URL Params**
 
-* Success Response 
+   **Required:**
+ 
+   `name=firstname<space>lastname`
 
-* Error Response
+* **Success Response** 
 
-* Sample Call 
+  * **Status Code:** 200 <br />
+    **Content:** 
+    `[
+        {
+            "document": {
+                "age": "63",
+                "location": "Toronto",
+                "last_name": "Mandel",
+                "first_name": "Howie",
+                "stage_name": "Howie",
+                "social_media": [
+                    {
+                        "url": "https://en.wikipedia.org/wiki/Howie_Mandel",
+                        "network": "wikipedia"
+                    }
+                ]
+            }
+        }
+    ]`
 
-* Notes:
+* **Sample Call** 
 
+    `http://host/comedian/Howie Mandel`
 
 Comedians
 ---
