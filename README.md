@@ -3,7 +3,7 @@ backend api for lol app
 
 Documenation
 ---
-The following documentation describes how to navigate the following routes:
+The following documentation describes how to navigate the following routes of this api:
 * host/**Comedian**/..
 * host/**Comedians**/..
 * host/**Club**/..
