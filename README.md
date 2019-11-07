@@ -20,6 +20,7 @@ Gets details about a comedian.
 * **URL**
 
     /comedian/:name
+    
 * **Method**
 
     `GET`
@@ -28,7 +29,7 @@ Gets details about a comedian.
 
    **Required:**
  
-   `name=firstname<space>lastname`
+   `name=firstname[string]<space>lastname[string]`
 
 * **Success Response** 
 
@@ -60,37 +61,60 @@ Comedians
 ---
 Gets a list of comedians based on location i.e. city. 
 
-* URL
+* **URL**
 
-* Method
+    /comedians/?location=city
+
+* **Method**
 
     `GET`
     
-* Success Response 
+*  **URL Params**
 
-* Error Response
+   **Required:**
+ 
+   `city=[string]`
+    
+* **Success Response**
 
-* Sample Call 
+  * **Status Code:** 200 <br />
+    **Content:**
+    
+    `[
+        {
+            "document": {
+                "age": "58",
+                "location": "Brooklyn",
+                "last_name": "Murphy",
+                "first_name": "Eddie",
+                "stage_name": "",
+                "social_media": [
+                    {
+                        "url": "https://en.wikipedia.org/wiki/Eddie_Murphy",
+                        "network": "wikipedia"
+                    }
+                ]
+            }
+        }
+    ]`
 
-* Notes:
+* **Sample Call** 
+
+    `http://lol-api-dev.us-east-1.elasticbeanstalk.com/comedians/?location=Brooklyn`
 
 Club
 ---
 Gets details about a specific club.
 
-* URL
+* **URL**
 
-* Method
+* **Method**
 
     `GET`
     
-* Success Response 
-
-* Error Response
+* **Success Response** 
 
 * Sample Call 
-
-* Notes:
 
 Clubs
 ---
