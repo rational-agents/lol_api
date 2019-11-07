@@ -104,9 +104,11 @@ Gets a list of comedians based on location i.e. city.
 
 Club
 ---
-Gets details about a specific club.
+Gets details about a specific club by venue i.e. club name.
 
 * **URL**
+
+    /club/:venue
 
 * **Method**
 
@@ -116,17 +118,31 @@ Gets details about a specific club.
 
    **Required:**
  
-   `city=[string]`
+   `venue=[string]`
     
 * **Success Response**
 
   * **Status Code:** 200 <br />
     **Content:**
-    ``
+    `[
+        {
+            "document": {
+                "owner": [],
+                "venue": "Carolines",
+                "address": {
+                    "zip": "10019",
+                    "city": "New York",
+                    "state": "NY",
+                    "street": "1626 Broadway"
+                },
+                "website": "https://www.carolines.com/"
+            }
+        }
+    ]`
 
 * **Sample Call** 
 
-    ``
+    `http://host/club/Carolines`
 
 Clubs
 ---
