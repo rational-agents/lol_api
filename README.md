@@ -200,9 +200,11 @@ Gets a list of clubs based on their location i.e. city.
 
 Show
 ---
-Gets the details about a show by it's headline.
+Gets the details about a show by headline.
 
 * **URL**
+
+    /show/:headline
 
 * **Method**
 
@@ -212,17 +214,32 @@ Gets the details about a show by it's headline.
 
    **Required:**
  
-   `city=[string]`
+   `headline=[string]`
     
 * **Success Response**
 
   * **Status Code:** 200 <br />
     **Content:**
-    `` 
+    `[
+        {
+            "document": {
+                "club": "Stand Up NY",
+                "lineup": [
+                    "Dave Chappelle",
+                    "Eddie Murphy",
+                    "Kevin Hart",
+                    "Melissa McCarthy"
+                ],
+                "headline": "April Fools",
+                "show_date": "4/1/2020",
+                "show_time": "5pm"
+            }
+        }
+    ]` 
 
 * **Sample Call** 
 
-    ``
+    `http://host/show/April Fools`
 
 Shows
 ---
@@ -230,6 +247,8 @@ Gets a list of shows based on venue i.e. club.
 
 * **URL**
 
+    /shows/?venue=club
+
 * **Method**
 
     `GET`
@@ -238,14 +257,42 @@ Gets a list of shows based on venue i.e. club.
 
    **Required:**
  
-   `city=[string]`
+   `venue=club[string]`
     
 * **Success Response**
 
   * **Status Code:** 200 <br />
     **Content:**
-    `` 
+    `[
+        {
+            "document": {
+                "club": "Stand Up NY",
+                "lineup": [
+                    "Howie Mandel",
+                    "Kevin Hart",
+                    "Melissa McCarthy"
+                ],
+                "headline": "Get Made",
+                "show_date": "3/15/2020",
+                "show_time": "9pm"
+            }
+        },
+        {
+            "document": {
+                "club": "Stand Up NY",
+                "lineup": [
+                    "Dave Chappelle",
+                    "Eddie Murphy",
+                    "Kevin Hart",
+                    "Melissa McCarthy"
+                ],
+                "headline": "April Fools",
+                "show_date": "4/1/2020",
+                "show_time": "5pm"
+            }
+        }
+    ]` 
 
 * **Sample Call** 
 
-    ``
+    `http://host/shows/?venue=Stand Up NY`
