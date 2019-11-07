@@ -126,12 +126,15 @@ Gets details about a specific club.
 
 * **Sample Call** 
 
+    ``
 
 Clubs
 ---
 Gets a list of clubs based on their location i.e. city.
 
 * **URL**
+
+    /clubs/?location=city
 
 * **Method**
 
@@ -147,9 +150,37 @@ Gets a list of clubs based on their location i.e. city.
 
   * **Status Code:** 200 <br />
     **Content:**
-    `` 
+    `[
+    {
+        "document": {
+            "owner": [],
+            "venue": "Gotham Comedy Club",
+            "address": {
+                "zip": "10011",
+                "city": "New York",
+                "state": "NY",
+                "street": "208 W 23rd St"
+            },
+            "website": "https://gothamcomedyclub.com/"
+        }
+    },
+    {
+        "document": {
+            "owner": [],
+            "venue": "Carolines",
+            "address": {
+                "zip": "10019",
+                "city": "New York",
+                "state": "NY",
+                "street": "1626 Broadway"
+            },
+            "website": "https://www.carolines.com/"
+        }
+    }]` 
 
-* **Sample Call** 
+* **Sample Call**
+
+    `http://host/clubs/?location=New York`
 
 Show
 ---
@@ -175,6 +206,8 @@ Gets the details about a show by it's headline.
 
 * **Sample Call** 
 
+    ``
+
 Shows
 ---
 Gets a list of shows based on venue i.e. club.
@@ -198,3 +231,5 @@ Gets a list of shows based on venue i.e. club.
     `` 
 
 * **Sample Call** 
+
+    ``
