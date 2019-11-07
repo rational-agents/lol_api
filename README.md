@@ -112,9 +112,20 @@ Gets details about a specific club.
 
     `GET`
     
-* **Success Response** 
+*  **URL Params**
+
+   **Required:**
+ 
+   `city=[string]`
+    
+* **Success Response**
+
+  * **Status Code:** 200 <br />
+    **Content:**
+    ``
 
 * **Sample Call** 
+
 
 Clubs
 ---
@@ -126,7 +137,17 @@ Gets a list of clubs based on their location i.e. city.
 
     `GET`
     
-* **Success Response** 
+*  **URL Params**
+
+   **Required:**
+ 
+   `city=[string]`
+    
+* **Success Response**
+
+  * **Status Code:** 200 <br />
+    **Content:**
+    `` 
 
 * **Sample Call** 
 
@@ -140,7 +161,17 @@ Gets the details about a show by it's headline.
 
     `GET`
     
-* **Success Response** 
+*  **URL Params**
+
+   **Required:**
+ 
+   `city=[string]`
+    
+* **Success Response**
+
+  * **Status Code:** 200 <br />
+    **Content:**
+    `` 
 
 * **Sample Call** 
 
@@ -154,6 +185,16 @@ Gets a list of shows based on venue i.e. club.
 
     `GET`
     
-* **Success Response** 
+*  **URL Params**
+
+   **Required:**
+ 
+   `city=[string]`
+    
+* **Success Response**
+
+  * **Status Code:** 200 <br />
+    **Content:**
+    `` 
 
 * **Sample Call** 
