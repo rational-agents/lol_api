@@ -100,7 +100,7 @@ Gets a list of comedians based on location i.e. city.
 
 * **Sample Call** 
 
-    `http://lol-api-dev.us-east-1.elasticbeanstalk.com/comedians/?location=Brooklyn`
+    `http://host/comedians/?location=Brooklyn`
 
 Club
 ---
@@ -114,58 +114,46 @@ Gets details about a specific club.
     
 * **Success Response** 
 
-* Sample Call 
+* **Sample Call** 
 
 Clubs
 ---
 Gets a list of clubs based on their location i.e. city.
 
-* URL
+* **URL**
 
-* Method
+* **Method**
 
     `GET`
     
-* Success Response 
+* **Success Response** 
 
-* Error Response
-
-* Sample Call 
-
-* Notes:
+* **Sample Call** 
 
 Show
 ---
 Gets the details about a show by it's headline.
 
-* URL
+* **URL**
 
-* Method
+* **Method**
 
     `GET`
     
-* Success Response 
+* **Success Response** 
 
-* Error Response
-
-* Sample Call 
-
-* Notes:
+* **Sample Call** 
 
 Shows
 ---
 Gets a list of shows based on venue i.e. club.
 
-* URL
+* **URL**
 
-* Method
+* **Method**
 
     `GET`
     
-* Success Response 
+* **Success Response** 
 
-* Error Response
-
-* Sample Call 
-
-* Notes:
+* **Sample Call** 
