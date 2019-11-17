@@ -312,5 +312,7 @@ Gets a list of shows based on venue i.e. club and / or comedian.
 * **Sample Calls** 
 
     `http://host/shows/?venue=Stand Up NY&comedian=Melissa McCarthy`
+
     `http://host/shows/?comedian=Melissa McCarthy`
+    
     `http://host/shows/?venue=Stand Up NY`
