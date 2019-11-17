@@ -48,7 +48,10 @@ Gets details about a comedian.
                         "url": "https://en.wikipedia.org/wiki/Howie_Mandel",
                         "network": "wikipedia"
                     }
-                ]
+                ],
+                "resource_link":"http://host/comedian/Howie Mandel",
+                "photo":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/HowieMandelM07.jpg/440px-HowieMandelM07.jpg",
+                "bio":"Howard Michael Mandel (born November 29, 1955) is a Canadian comedian, actor, voice actor, and television host. He hosted the CNBC (originally NBC) game show Deal or No Deal, as well as the show's daytime and Canadian-English counterparts. In 1987, Mandel starred alongside Amy Steel in the comedy film Walk Like a Man. From 1982 to 1988 Mandel played rowdy ER intern Dr. Wayne Fiscus on the NBC medical drama St. Elsewhere. He also created and starred in the children's cartoon Bobby's World, and judges on NBC's America's Got Talent."
             }
         }
     ]`
@@ -93,7 +96,11 @@ Gets a list of comedians based on location i.e. city.
                         "url": "https://en.wikipedia.org/wiki/Eddie_Murphy",
                         "network": "wikipedia"
                     }
-                ]
+                ],
+                "resource_link":"http://host/comedian/Eddie Murphy",
+                ,
+                "photo":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Eddie_Murphy_by_David_Shankbone.jpg/440px-Eddie_Murphy_by_David_Shankbone.jpg",
+                "bio":"Edward Regan Murphy (born April 3, 1961)[2] is an American actor, comedian, and singer.  Murphy was a regular cast member on Saturday Night Live from 1980 to 1984.  He has worked as a stand-up comedian and was ranked No. 10 on Comedy Central''s list of the 100 Greatest Stand-ups of All Time.  In films, Murphy has received Golden Globe Award nominations for his performances in 48 Hrs., the Beverly Hills Cop series, Trading Places, and The Nutty Professor.  In 2007, he won the Golden Globe for Best Supporting Actor and received a nomination for the Academy Award for Best Supporting Actor for his portrayal of soul singer James \"Thunder\" Early in Dreamgirls."
             }
         }
     ]`
@@ -135,7 +142,8 @@ Gets details about a specific club by venue i.e. club name.
                     "state": "NY",
                     "street": "1626 Broadway"
                 },
-                "website": "https://www.carolines.com/"
+                "website": "https://www.carolines.com/",
+                "resource_link":"http://host/club/Carolines"
             }
         }
     ]`
@@ -177,7 +185,8 @@ Gets a list of clubs based on their location i.e. city.
                 "state": "NY",
                 "street": "208 W 23rd St"
             },
-            "website": "https://gothamcomedyclub.com/"
+            "website": "https://gothamcomedyclub.com/",
+            "resource_link":"http://host/club/Gotham Comedy Club"
         }
     },
     {
@@ -190,7 +199,8 @@ Gets a list of clubs based on their location i.e. city.
                 "state": "NY",
                 "street": "1626 Broadway"
             },
-            "website": "https://www.carolines.com/"
+            "website": "https://www.carolines.com/",
+            "resource_link":"http://host/club/Carolines"
         }
     }]` 
 
@@ -232,7 +242,8 @@ Gets the details about a show by headline.
                 ],
                 "headline": "April Fools",
                 "show_date": "4/1/2020",
-                "show_time": "5pm"
+                "show_time": "5pm",
+                "resource_link":"http://host/show/April Fools"
             }
         }
     ]` 
@@ -243,11 +254,11 @@ Gets the details about a show by headline.
 
 Shows
 ---
-Gets a list of shows based on venue i.e. club.
+Gets a list of shows based on venue i.e. club and / or comedian.
 
 * **URL**
 
-    /shows/?venue=club
+    /shows/?venue=club&comedian=comedian
 
 * **Method**
 
@@ -255,9 +266,12 @@ Gets a list of shows based on venue i.e. club.
     
 *  **URL Params**
 
-   **Required:**
+   **Optional:**
  
    `venue=club[string]`
+   `comedian=comedian[string]`
+
+   Note: though both these parameters are optional, at least one is required.
     
 * **Success Response**
 
@@ -274,7 +288,8 @@ Gets a list of shows based on venue i.e. club.
                 ],
                 "headline": "Get Made",
                 "show_date": "3/15/2020",
-                "show_time": "9pm"
+                "show_time": "9pm",
+                "resource_link":"http://host/show/Get Made"
             }
         },
         {
@@ -288,11 +303,14 @@ Gets a list of shows based on venue i.e. club.
                 ],
                 "headline": "April Fools",
                 "show_date": "4/1/2020",
-                "show_time": "5pm"
+                "show_time": "5pm",
+                "resource_link":"http://host/show/April Fools"
             }
         }
     ]` 
 
-* **Sample Call** 
+* **Sample Calls** 
 
+    `http://host/shows/?venue=Stand Up NY&comedian=Melissa McCarthy`
+    `http://host/shows/?comedian=Melissa McCarthy`
     `http://host/shows/?venue=Stand Up NY`
