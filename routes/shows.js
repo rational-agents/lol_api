@@ -18,7 +18,7 @@ router.get('/', async function(req, res, next) {
     if( req.query.venue && req.query.comedian){
         data = await Shows.findAll({
         attributes:['document'],
-        where:{ [Op.and]:[ { venue:venue },{ document:{ [Op.contains]:{ lineup:[comedian] }}} ]}
+        where:{ [Op.and]:[ {document:{venue:venue}},{ document:{ [Op.contains]:{ lineup:[comedian] }}} ]}
       });
       res.send(data);
     }
@@ -27,7 +27,7 @@ router.get('/', async function(req, res, next) {
     else if( req.query.venue && !req.query.comedian ){
         data = await Shows.findAll({
         attributes:['document'],
-        where:{ venue:venue}
+        where:{ document:{venue:venue}}
       });
       res.send(data);
     }
