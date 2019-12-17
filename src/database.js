@@ -27,6 +27,7 @@ const Comedians = database.define('comedians',{
      last_name:{type:Sequelize.STRING, allowNull:false}, // varchar,
      stage_name:{type:Sequelize.STRING}, // varchar,
      location:{type:Sequelize.STRING}, // varchar,
+     dob:{type:Sequelize.DATEONLY}, // date NOT NULL
      age:{type:Sequelize.STRING}, // varchar,
      document:{type: Sequelize.JSONB, allowNull: true}
 });
